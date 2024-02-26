@@ -1,0 +1,45 @@
+Original map
+ void C::h() -> void A::h()
+Vtable for 'C' (7 entries).
+   0 | offset_to_top (0)
+   1 | C RTTI
+       -- (A, 0) vtable address --
+       -- (C, 0) vtable address --
+   2 | void A::f()
+   3 | void C::h()
+   4 | offset_to_top (-8)
+   5 | C RTTI
+       -- (B, 8) vtable address --
+   6 | void C::h()
+       [this adjustment: -8 non-virtual] method: void B::h()
+
+Thunks for 'void C::h()' (1 entry).
+   0 | this adjustment: -8 non-virtual
+
+VTable indices for 'C' (1 entries).
+   1 | void C::h()
+
+Original map
+ void C::h() -> void A::h()
+Vtable for 'A' (4 entries).
+   0 | offset_to_top (0)
+   1 | A RTTI
+       -- (A, 0) vtable address --
+   2 | void A::f()
+   3 | void A::h()
+
+VTable indices for 'A' (2 entries).
+   0 | void A::f()
+   1 | void A::h()
+
+Original map
+ void C::h() -> void A::h()
+Vtable for 'B' (3 entries).
+   0 | offset_to_top (0)
+   1 | B RTTI
+       -- (B, 0) vtable address --
+   2 | void B::h()
+
+VTable indices for 'B' (1 entries).
+   0 | void B::h()
+

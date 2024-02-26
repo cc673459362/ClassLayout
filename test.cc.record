@@ -1,0 +1,26 @@
+*** Dumping AST Record Layout
+         0 | class A
+         0 |   (A vtable pointer)
+         4 |   int a
+           | [sizeof=8, dsize=8, align=4,
+           |  nvsize=8, nvalign=4]
+
+*** Dumping AST Record Layout
+         0 | class B
+         0 |   (B vtable pointer)
+         4 |   int b
+           | [sizeof=8, dsize=8, align=4,
+           |  nvsize=8, nvalign=4]
+
+*** Dumping AST Record Layout
+         0 | class C
+         0 |   class A (primary base)
+         0 |     (A vtable pointer)
+         4 |     int a
+         8 |   class B (base)
+         8 |     (B vtable pointer)
+        12 |     int b
+        16 |   int c
+           | [sizeof=20, dsize=20, align=4,
+           |  nvsize=20, nvalign=4]
+
